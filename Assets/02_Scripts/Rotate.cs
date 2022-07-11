@@ -72,8 +72,7 @@ public class Rotate : MonoBehaviour
         }
     }
 
-    void test()
+    public void test()
     {
-        transform.rotation = Quaternion.Slerp(990);
     }
 }
