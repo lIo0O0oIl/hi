@@ -8,14 +8,12 @@ public class Rotate : MonoBehaviour
 
     public void dkssud()
     {
-        Debug.Log(tlqkf);
         tlqkf = tlqkf + 1;
         gkdl();
     }
 
     public void dkssud1()
     {
-        Debug.Log(tlqkf);
         tlqkf = tlqkf - 1;
         gkdl1();
     }
@@ -25,19 +23,15 @@ public class Rotate : MonoBehaviour
         switch (tlqkf)
         {
             case 1:
-                Debug.Log("아래");
                 transform.Rotate(0, 0, 90); // 입구 아래쪽
                 break;
             case 2:
-                Debug.Log("오른쪽");
                 transform.Rotate(0, 0, 90); // 입구 오른쪽
                 break;
             case 3:
-                Debug.Log("위쪽");
                 transform.Rotate(0, 0, 90); // 입구 위쪽
                 break;
             case 4:
-                Debug.Log("왼쪽");
                 transform.Rotate(0, 0, 90); // 입구 왼쪽
                 break;
             case 5:
@@ -51,19 +45,15 @@ public class Rotate : MonoBehaviour
         switch (tlqkf)
         {
             case 1:
-                Debug.Log("아래");
                 transform.Rotate(0, 0, -90); // 입구 아래쪽
                 break;
             case 2:
-                Debug.Log("오른쪽");
                 transform.Rotate(0, 0, -90); // 입구 오른쪽
                 break;
             case 3:
-                Debug.Log("위쪽");
                 transform.Rotate(0, 0, -90); // 입구 위쪽
                 break;
             case 4:
-                Debug.Log("왼쪽");
                 transform.Rotate(0, 0, -90); // 입구 왼쪽
                 break;
             case 0:
@@ -72,7 +62,17 @@ public class Rotate : MonoBehaviour
         }
     }
 
+    bool rotate = false;
+
     public void test()
     {
+        rotate = true;
+    }
+
+    int rotatee = 0;
+
+    private void Update()
+    {
+        transform.Rotate(0f, 0f, 90f * Time.deltaTime);
     }
 }
